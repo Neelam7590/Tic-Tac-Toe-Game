@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Fredoka:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-bubble: 'Cherry Bomb One', 'Fredoka', cursive;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite linear;
+}
+
+.font-bubble {
+  font-family: 'Cherry Bomb One', 'Fredoka', cursive;
+}
+
+.bg-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.text-glossy {
+  background: linear-gradient(to bottom, #ffffff 0%, #fff7e6 40%, #ffcc00 50%, #ff9500 60%, #fff5cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0px 6px 0px #CC5500) drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.6));
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.7);
+}
+
+.square-glow {
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 0 30px 10px rgba(250, 204, 21, 0.5),
+    0 0 60px 20px rgba(249, 115, 22, 0.4),
+    inset 0 0 20px 5px rgba(250, 204, 21, 0.3),
+    inset 0 0 50px 15px rgba(249, 115, 22, 0.2);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%);
+  backdrop-filter: blur(12px);
+}
+
+.box-glossy {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.6);
+  border-left: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6), 
+    inset 0 6px 12px rgba(255,255,255,0.5),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-candy {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.6) 0%, rgba(217, 119, 6, 0.4) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 10px 25px rgba(217, 119, 6, 0.4),
+    inset 0 6px 12px rgba(255,255,255,0.7),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-candy:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.7) 0%, rgba(217, 119, 6, 0.5) 100%);
+  box-shadow: 
+    0 15px 35px rgba(217, 119, 6, 0.5),
+    inset 0 8px 15px rgba(255,255,255,0.8),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-candy:active {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: 
+    0 5px 15px rgba(217, 119, 6, 0.3),
+    inset 0 2px 5px rgba(255,255,255,0.4),
+    inset 0 -2px 5px rgba(0,0,0,0.4);
+}
+
+.btn-candy-blue {
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.5) 0%, rgba(49, 46, 129, 0.5) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 10px 25px rgba(49, 46, 129, 0.4),
+    inset 0 6px 12px rgba(255,255,255,0.6),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-candy-blue:hover {
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.6) 0%, rgba(49, 46, 129, 0.6) 100%);
+  box-shadow: 
+    0 15px 35px rgba(49, 46, 129, 0.5),
+    inset 0 8px 15px rgba(255,255,255,0.7),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-candy-blue:active {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: 
+    0 5px 15px rgba(49, 46, 129, 0.3),
+    inset 0 2px 5px rgba(255,255,255,0.3),
+    inset 0 -2px 5px rgba(0,0,0,0.4);
+}
+
+.btn-candy-green {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.5) 0%, rgba(6, 78, 59, 0.5) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 10px 25px rgba(6, 78, 59, 0.4),
+    inset 0 6px 12px rgba(255,255,255,0.6),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-candy-green:hover {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.6) 0%, rgba(6, 78, 59, 0.6) 100%);
+  box-shadow: 
+    0 15px 35px rgba(6, 78, 59, 0.5),
+    inset 0 8px 15px rgba(255,255,255,0.7),
+    inset 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-candy-green:active {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: 
+    0 5px 15px rgba(6, 78, 59, 0.3),
+    inset 0 2px 5px rgba(255,255,255,0.3),
+    inset 0 -2px 5px rgba(0,0,0,0.4);
+}
+
+.neon-x {
+  filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.8)) drop-shadow(0 0 20px rgba(99, 102, 241, 0.6));
+}
+
+.neon-o {
+  filter: drop-shadow(0 0 10px rgba(251, 113, 133, 0.8)) drop-shadow(0 0 20px rgba(244, 63, 94, 0.6));
+}
